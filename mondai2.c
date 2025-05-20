@@ -7,15 +7,15 @@ int main(void){
     for(int i=0;i<H;i++){
         scanf("%s",S[i]);
     }
-    /*for(int i=0;i<W;i++){
+    /*for(int i=0;i<W;i++){　未使用の要素が使われることはないので初期化は不要
         printf("%s\n",S[i]);
     }*/
     
     int X[N],Y[N];
-    for(int i=0;i<N;i++){
+    /*for(int i=0;i<N;i++){ 
         X[i]=0;
         Y[i]=0;
-    }
+    }*/
     for(int i=0;i<N;i++){
         scanf("%d %d",&Y[i],&X[i]);
     }
@@ -24,11 +24,7 @@ int main(void){
     }*/
     
     for(int i=0;i<N;i++){
-        if(S[X[i]][Y[i]] == "."){
-            S[X[i]][Y[i]] = "#";
-        }else{
-            S[X[i]][Y[i]] = ".";
-        }
+    	S[Y[i]][X[i]] = '#'; //文字はシングルコーテーション、行と列が逆！！あと問題文よく見ろ
     }
     
      for(int i=0;i<H;i++){
